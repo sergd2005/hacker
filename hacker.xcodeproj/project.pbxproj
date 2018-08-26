@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E3CAD6821334E8600A33582 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4E3CAD6721334E8600A33582 /* main.mm */; };
+		4E3CAD8B2133558D00A33582 /* Test.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4E3CAD6E2133549100A33582 /* Test.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +26,21 @@
 /* Begin PBXFileReference section */
 		4E3CAD6421334E8600A33582 /* hacker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hacker; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3CAD6721334E8600A33582 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		4E3CAD6E2133549100A33582 /* Test.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Test.mm; sourceTree = "<group>"; };
+		4E3CAD7A2133552400A33582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E3CAD832133558600A33582 /* tests_mac.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tests_mac.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E3CAD872133558600A33582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4E3CAD6121334E8600A33582 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E3CAD802133558600A33582 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				4E3CAD6621334E8600A33582 /* hacker */,
+				4E3CAD772133552400A33582 /* tests */,
+				4E3CAD842133558600A33582 /* tests_mac */,
 				4E3CAD6521334E8600A33582 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				4E3CAD6421334E8600A33582 /* hacker */,
+				4E3CAD832133558600A33582 /* tests_mac.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +75,23 @@
 				4E3CAD6721334E8600A33582 /* main.mm */,
 			);
 			path = hacker;
+			sourceTree = "<group>";
+		};
+		4E3CAD772133552400A33582 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				4E3CAD7A2133552400A33582 /* Info.plist */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+		4E3CAD842133558600A33582 /* tests_mac */ = {
+			isa = PBXGroup;
+			children = (
+				4E3CAD6E2133549100A33582 /* Test.mm */,
+				4E3CAD872133558600A33582 /* Info.plist */,
+			);
+			path = tests_mac;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +114,23 @@
 			productReference = 4E3CAD6421334E8600A33582 /* hacker */;
 			productType = "com.apple.product-type.tool";
 		};
+		4E3CAD822133558600A33582 /* tests_mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E3CAD882133558600A33582 /* Build configuration list for PBXNativeTarget "tests_mac" */;
+			buildPhases = (
+				4E3CAD7F2133558600A33582 /* Sources */,
+				4E3CAD802133558600A33582 /* Frameworks */,
+				4E3CAD812133558600A33582 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tests_mac;
+			productName = tests_mac;
+			productReference = 4E3CAD832133558600A33582 /* tests_mac.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +141,9 @@
 				ORGANIZATIONNAME = Adobe;
 				TargetAttributes = {
 					4E3CAD6321334E8600A33582 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					4E3CAD822133558600A33582 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -109,9 +161,20 @@
 			projectRoot = "";
 			targets = (
 				4E3CAD6321334E8600A33582 /* hacker */,
+				4E3CAD822133558600A33582 /* tests_mac */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E3CAD812133558600A33582 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E3CAD6021334E8600A33582 /* Sources */ = {
@@ -119,6 +182,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E3CAD6821334E8600A33582 /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E3CAD7F2133558600A33582 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E3CAD8B2133558D00A33582 /* Test.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +321,38 @@
 			};
 			name = Release;
 		};
+		4E3CAD892133558600A33582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = tests_mac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Adobe.tests-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4E3CAD8A2133558600A33582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = tests_mac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Adobe.tests-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -267,6 +370,15 @@
 			buildConfigurations = (
 				4E3CAD6C21334E8600A33582 /* Debug */,
 				4E3CAD6D21334E8600A33582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E3CAD882133558600A33582 /* Build configuration list for PBXNativeTarget "tests_mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E3CAD892133558600A33582 /* Debug */,
+				4E3CAD8A2133558600A33582 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
